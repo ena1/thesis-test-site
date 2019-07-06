@@ -8,7 +8,64 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-  
+    <div class="wrapper">
+      <header>
+        <h1><a href="#"><img id="logo" src="images/logo.svg" alt="Stamp logo"></a></h1>
+        <nav class="navbar">
+          <label for="menu-icon">&#9776;</label>
+          <input type="checkbox" id="menu-icon"/>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main-content">
+        <div class="outer">
+          <div class="inner">
+            <section class="hero-copy">
+              <h1>Simple Way to Organize Your Inspirations</h1>
+              <p>I think what motivates people is not great hate,
+        but great love for other people.</p>
+            </section>
+            <section class="sign-up-form">
+              <h6>Sign up for free</h6>
+              <form action="#" method="post">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="user-name">
+                </div>
+                <div>
+                  <label for="email">E-mail</label>
+                  <input type="text" id="email" name="user-email">
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input type="text" id="password" name="user-password">
+                </div>
+                <div class="button">
+                  <button type="submit">Sign up ></button>
+                </div>
+              </form>
+              <p class="terms-of-service">By clicking "Sign up" I agree to our
+                <br />
+              <span><a href="#">Terms of Service</a>.</span></p>
+            </section>
+          </div> <!-- /inner -->
+        </div> <!-- /outer -->
+      </div><!-- /main-content -->
+      <div class="push"></div>
+    </div> <!-- /wrapper -->
+      <footer>
+        <p class="copyright">© 2016 Stamp. All Rights Reserved</p>
+        <ul class="footer-nav">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </footer>
   </body>
 </html>

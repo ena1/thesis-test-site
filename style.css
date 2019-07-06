@@ -1,4 +1,247 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6, p {
+   margin-top: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+button:focus {
+    outline: 0;
+}
+
+/* Base */
+:root { font-size: 16px; }
 body {
-  background: url("images/background.png") #161618 center no-repeat fixed;
+  background: url("images/background.png") #161618 center center no-repeat fixed;
   background-size: cover;
+  color: #FFF;
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+	font-size: 1rem;
+	position: relative;
+	overflow-x: hidden;
+	height: 100%;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Header */
+header {
+	display: flex;
+	flex-wrap: nowrap;
+}
+/* Logo */
+#logo {
+	width: 91px;
+	height: 33px;
+  margin: 2.0625rem 0 0 3.75rem;
+	float: left;
+}
+/* Navigation */
+.navbar {
+	margin: auto;
+	width: 475px;
+}
+.navbar li {
+    display: inline-block;
+    font-size: 1.2rem;
+		margin-right: 3.5rem;
+		margin: 2.5rem 3.5rem 0 0;
+}
+.navbar li:last-child {
+    margin-right: 0;
+	}
+.navbar li a:hover {
+	color: #2c99ed;
+}
+/* Hide Hamburger Menu-Icon  */
+.navbar label, #menu-icon {
+  display: none;
+}
+
+/* Main Content */
+.main-content {
+	margin: 0 auto 100px;
+	width: 100%;
+	overflow: hidden;
+}
+.outer {
+	position: relative;
+	left: 50%;
+	float: left;
+}
+.inner {
+	position: relative;
+	left: -50%;
+	float: left;
+}
+section {
+	width: 30%;
+  margin: 12rem 0 0 10rem;
+	float: left;
+}
+.hero-copy {
+	margin-right: 5%;
+}
+.hero-copy h1 {
+	font-size: 3rem;
+}
+.hero-copy p {
+  margin: 33px 0 0;
+	font-size: 1.2rem;
+	line-height: 20px;
+}
+.sign-up-form {
+  margin-top: 10rem;
+	/* width: 300px; */
+}
+.sign-up-form h6 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  text-align: center;
+	margin-bottom: 31px;
+}
+.sign-up-form p {
+	text-align: center;
+	font-size: 0.8rem;
+	padding-top: 24px;
+	line-height: 20px;
+}
+.sign-up-form p span {
+	display: block;
+	font-weight: bold;
+}
+
+/* Form */
+form {
+	border: 1px solid #666;
+	background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+	font-weight: lighter;
+}
+form input {
+	color: #FFF;
+	outline: none;
+}
+form .button {
+	background-color: #2c99ed;
+	text-align: center;
+}
+form div {
+	border-bottom: 1px solid #666;
+}
+form input {
+	background-color: transparent;
+	border: 0;
+	width: 150px;
+}
+label,
+input,
+button {
+	padding: 15px;
+}
+button {
+	background-color: transparent;
+	border: none;
+	color: #FFF;
+	cursor: pointer;
+}
+
+/* Footer */
+.wrapper {
+	min-height: 100%;
+	/* overflow-y: visible; */
+	margin-bottom: -10px;
+}
+.push,
+footer {
+	height: 10px;
+}
+footer {
+	margin: 10px;
+	font-size: 0.7rem;
+	width: 100%
+}
+footer p {
+	float: left;
+}
+.footer-nav {
+	float: right;
+}
+.footer-nav li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 30px;
+}
+
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* Show Hamburger */
+  .navbar label {
+    display: inline-block;
+    color: #fff;
+    background: #2c99ed;
+    padding: 4px 10px 5px;
+		float: right;
+		margin: 2.0625rem 3.75rem 0 0;
+		font-style: normal;
+    font-size: 1.8em;
+  }
+	/* Toggle Menu on Click */
+	.navbar ul {
+		display: none;
+	}
+	.navbar input:checked ~ ul {
+		display: block;
+		float: right;
+		clear: right;
+		position: absolute;
+		z-index: 1;
+		top: 80px;
+		right: 1%;
+	}
+  /* Vertical Navigation */
+  .navbar ul li {
+    display: block;
+		border-top: 1px solid #333;
+		text-align: right;
+		margin: 1rem 3.5rem 0 0;
+  }
+	.navbar li:last-child {
+	    margin-right: 3.5rem;
+		}
+	/* Main Content */
+	.hero-copy,
+	.sign-up-form {
+		margin: 12rem auto 0;
+		width: 300px;
+	}
+	section {
+		float: none;
+	}
+	.sign-up-form {
+		margin: 6rem auto 20px;
+	}
+	footer {
+		margin: 50px 60px 10px;
+	}
+	.footer-nav {
+		clear: left;
+		float: left;
+		margin: 3px 10px 0 0;
+	}
 }
